@@ -1,0 +1,268 @@
+/* Variables de color estilo minimalista/tech */
+:root {
+    --bg-color: #fbfbfd; /* Un gris casi blanco, muy Apple */
+    --text-main: #1d1d1f; /* Gris muy oscuro, menos agresivo que el negro puro */
+    --text-muted: #86868b;
+    --accent-color: #0066cc; /* Azul sobrio */
+    --border-color: #d2d2d7;
+}
+
+/* Reseteo básico para limpiar márgenes del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Tipografía nativa del sistema: limpia y moderna */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased; /* Suaviza el texto */
+}
+
+/* === Navegación === */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 5%; 
+    max-width: 95%; /* Esto empuja los elementos mucho más a las orillas */
+    margin: 0 auto;
+}
+
+
+.logo {
+    font-size: 1.5rem; /* Logo un poco más grande */
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+.logo span {
+    color: var(--accent-color);
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Más espacio entre los links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 1.1rem; /* Letras del menú más grandes */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-main);
+}
+
+/* === Hero Section === */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.badge {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Un poco más espaciado se ve más elegante */
+    color: var(--text-muted);
+    margin-bottom: 40px; /* Esto empuja el texto hacia arriba */
+    display: inline-block;
+}
+
+
+.hero-title {
+    font-size: 3.5rem; 
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    margin-bottom: 30px;
+    text-align: center; /* Centramos el texto principal */
+    display: inline-block;
+}
+.hero-content {
+    max-width: 900px;
+    text-align: center; /* Aseguramos que el contenedor general esté centrado */
+    margin: 0 auto;
+}
+.highlight {
+    color: var(--text-muted); /* Le da un toque sutil al título */
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+/* === Botones === */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 30px; /* Bordes redondeados modernos */
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--text-main);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #000;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--border-color);
+}
+
+
+/* === Efecto Typewriter Actualizado === */
+.hero-title {
+    font-size: 3.5rem; /* Un poco más pequeño para que quepan bien las 3 líneas */
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    margin-bottom: 30px;
+    text-align: left; /* Alineado a la izquierda se ve más pro como terminal */
+    display: inline-block;
+}
+
+.type-line {
+    display: inline-block;
+    min-height: 1.2em; /* Mantiene el espacio aunque esté vacío */
+}
+
+.text-muted {
+    color: var(--text-muted);
+    font-size: 2.5rem; /* La última línea un poco más pequeña */
+}
+
+/* El cursor mágico hecho con CSS */
+.typing-active::after {
+    content: '|';
+    color: var(--accent-color);
+    font-weight: 100;
+    animation: parpadeo 0.8s infinite;
+    margin-left: 5px;
+}
+
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* === Nuevas Secciones (Scroll) === */
+.section {
+    padding: 100px 20px; /* Mucho espacio para respirar (minimalista) */
+}
+
+.bg-light {
+    background-color: #f5f5f7; /* Un gris muy sutil para diferenciar secciones */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+/* === Grid de Proyectos === */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03); /* Sombra súper suave */
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Efecto al pasar el mouse */
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    background-color: #e5e5ea;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    display: inline-block;
+    background: var(--bg-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 15px;
+    margin-right: 5px;
+    border: 1px solid var(--border-color);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.contact-text {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+}
