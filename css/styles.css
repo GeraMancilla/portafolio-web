@@ -66,25 +66,30 @@ body {
 .hero {
     height: 80vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 20px;
+    align-items: flex-start;
+    padding-top: 15vh;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .hero-content {
-    max-width: 800px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo verticalmente como un rayo láser */
+    text-align: center;
 }
 
 .badge {
     font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 2px; /* Un poco más espaciado se ve más elegante */
+    letter-spacing: 2px;
     color: var(--text-muted);
-    margin-bottom: 40px; /* Esto empuja el texto hacia arriba */
-    display: inline-block;
+    margin-bottom: 30px; 
+    display: block; /* Lo mantiene en su propia línea bien centrado */
 }
-
 
 .hero-title {
     font-size: 3.5rem; 
@@ -92,9 +97,11 @@ body {
     line-height: 1.2;
     letter-spacing: -1.5px;
     margin-bottom: 30px;
-    text-align: center; /* Centramos el texto principal */
-    display: inline-block;
+    text-align: center; 
+    display: block; /* Esto evita que la caja brinque mientras se escribe */
+    width: 100%;
 }
+
 .hero-content {
     max-width: 900px;
     text-align: center; /* Aseguramos que el contenedor general esté centrado */
